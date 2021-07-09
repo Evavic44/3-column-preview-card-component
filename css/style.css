@@ -1,13 +1,85 @@
 :root {
-   --bg-primary:  
+   --primary-color: hsl(0, 0%, 95%); 
    --color-1: hsl(31, 77%, 52%);
-   --color-2: hsl(184, 100%, 22%)
-   --color-3: hsl(179, 100%, 13%)
+   --color-2: hsl(184, 100%, 22%);
+   --color-3: hsl(179, 100%, 13%);
 
-   --text-color-1: hsla(0, 0%, 100%, 0.75);
-   --text-color-2: hsl(0, 0%, 95%);
+   --other-color: hsla(0, 0%, 100%, 0.75);
 }
 
 body {
+   font-family: 'Lexend', sans-serif;
+   background-color: var(--primary-color);
+   font-weight: 500;
+   color: #fff;
    font-size: 15px;
+}
+
+main {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   margin: 0 auto;
+   max-width: 900px;
+}
+
+h1 {
+   font-size: 2.3rem;
+   font-family: 'Big Shoulders Display', cursive;
+}
+
+p {
+   font-family: 'Lexend', sans-serif;
+   color: var(--other-color);
+   line-height: 1.5;
+}
+
+.container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-auto-rows: minmax(450px, 1fr);
+}
+
+.btn {
+   display: inline-block;
+   text-decoration: none;
+   background-color: var(--primary-color);
+   padding: 0.9rem 2.3rem;
+   border: 2px solid var(--primary-color);
+   border-radius: 30px;
+   transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+   background: none;
+   border: 2px solid var(--primary-color);
+   color: var(--primary-color);
+}
+
+.cards {
+   padding: 3rem 3rem 1rem;
+}
+
+/* Card One */
+.cards:first-child {
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+   background-color: var(--color-1);
+}
+
+/* Card Two */
+.cards:nth-child(2) {
+   background-color: var(--color-2);
+}
+
+/* Card Three */
+.cards:nth-child(3) {
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+   background-color: var(--color-3);
+}
+
+.content {
+   margin: 2rem 0 4rem;
 }
