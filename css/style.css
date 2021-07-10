@@ -98,7 +98,7 @@ p {
       height: 100%;
    }
 
-   p {
+   .content p {
       margin-right: 5rem;
    }
 
@@ -159,10 +159,15 @@ p {
 }
 
 /* Attribution */
+#attribution {
+   display: flex;
+   justify-content: center;
+   margin: 10px 0;
+}
+
 #attribution p {
    font-size: 0.86rem;
    color: var(--color-2);
-   text-align: center;
 }
 
 #attribution a {
