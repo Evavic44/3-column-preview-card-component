@@ -98,10 +98,6 @@ p {
       height: 100%;
    }
 
-   .content p {
-      margin-right: 5rem;
-   }
-
    /* Splits container into 4 grids */
    #container {
       grid-template-columns: repeat(4, 1fr);
@@ -134,6 +130,10 @@ p {
    #container {
       grid-template-columns: repeat(1, 1fr);
       margin: 0 1rem;
+   }
+
+   .content p {
+      margin-right: 5rem;
    }
 
    /* Positions card 1 to the first column and first row */
