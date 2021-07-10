@@ -8,14 +8,3 @@
 .text-color-3 {
    color: var(--color-3);
 }
-
-/* Background color */
-.bg-color-1 {
-   background: var(--color-1);
-}
-.bg-color-2 {
-   background: var(--color-2);
-}
-.bg-color-3 {
-   background: var(--color-3);
-}
