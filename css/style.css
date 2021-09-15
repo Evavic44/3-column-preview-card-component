@@ -1,176 +1,176 @@
 :root {
-   --primary-color: hsl(0, 0%, 95%); 
-   --secondary-color: hsla(0, 0%, 100%, 0.75);
-   --color-1: hsl(31, 77%, 52%);
-   --color-2: hsl(184, 100%, 22%);
-   --color-3: hsl(179, 100%, 13%);
+  --primary-color: hsl(0, 0%, 95%);
+  --secondary-color: hsla(0, 0%, 100%, 0.75);
+  --color-1: hsl(31, 77%, 52%);
+  --color-2: hsl(184, 100%, 22%);
+  --color-3: hsl(179, 100%, 13%);
 }
 
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-   font-family: 'Lexend', sans-serif;
-   background-color: var(--primary-color);
-   font-weight: 500;
-   color: #fff;
-   font-size: 15px;
+  font-family: "Lexend", sans-serif;
+  background-color: var(--primary-color);
+  font-weight: 500;
+  color: #fff;
+  font-size: 15px;
 }
 
 main {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 100vh;
-   margin: 0 auto;
-   max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 900px;
 }
 
 h1 {
-   font-size: 2.3rem;
-   margin: 1.6rem 0;
-   font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.3rem;
+  margin: 1.6rem 0;
+  font-family: "Big Shoulders Display", cursive;
 }
 
 p {
-   font-family: 'Lexend', sans-serif;
-   color: var(--secondary-color);
-   line-height: 1.5;
+  font-family: "Lexend", sans-serif;
+  color: var(--secondary-color);
+  line-height: 1.5;
 }
 
 #container {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-auto-rows: minmax(450px, 1fr);
-   padding: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(450px, 1fr);
+  padding: 0.8rem;
 }
 
 .btn {
-   display: inline-block;
-   text-decoration: none;
-   background-color: var(--primary-color);
-   padding: 0.8rem 2rem;
-   border: 2px solid var(--primary-color);
-   border-radius: 30px;
-   transition: all 0.3s ease-in-out;
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-   background: none;
-   border: 2px solid var(--primary-color);
-   color: var(--primary-color);
+  background: none;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .cards {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   justify-content: space-around;
-   padding: 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 1.5rem 3rem;
 }
 
 /* Card One */
 .cards:first-child {
-   border-top-left-radius: 10px;
-   border-bottom-left-radius: 10px;
-   background-color: var(--color-1);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: var(--color-1);
 }
 
 /* Card Two */
 .cards:nth-child(2) {
-   background-color: var(--color-2);
+  background-color: var(--color-2);
 }
 
 /* Card Three */
 .cards:nth-child(3) {
-   border-top-right-radius: 10px;
-   border-bottom-right-radius: 10px;
-   background-color: var(--color-3);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--color-3);
 }
 
 /* Responsiveness */
-@media(max-width: 790px) {
-   /* Removes fix height on main container */
-   main {
-      height: 100%;
-   }
+@media (max-width: 790px) {
+  /* Removes fix height on main container */
+  main {
+    height: 100%;
+  }
 
-   /* Splits container into 4 grids */
-   #container {
-      grid-template-columns: repeat(4, 1fr);
-   }
+  /* Splits container into 4 grids */
+  #container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-   /* Makes card 1 take up full width  */
-   .cards:first-child {
-      grid-column: 1 / 5;
-      border-top-right-radius: 10px;
-      border-bottom-left-radius: 0;
-   }
-   
-   /* Makes card 2 share half width */
-   .cards:nth-child(2) {
-      border-bottom-left-radius: 10px;
-      grid-row: 2 / 3;
-      grid-column: 1 / 3;
-   }
-   
-   /* Makes card 3 share half width */
-   .cards:last-child {
-      border-top-right-radius: 0;
-      grid-row: 2 / 3;
-      grid-column: 3 / 5;
-   }
+  /* Makes card 1 take up full width  */
+  .cards:first-child {
+    grid-column: 1 / 5;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  /* Makes card 2 share half width */
+  .cards:nth-child(2) {
+    border-bottom-left-radius: 10px;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+
+  /* Makes card 3 share half width */
+  .cards:last-child {
+    border-top-right-radius: 0;
+    grid-row: 2 / 3;
+    grid-column: 3 / 5;
+  }
 }
 
-@media(max-width: 550px) {
-   /* Makes container 1 grid */
-   #container {
-      grid-template-columns: repeat(1, 1fr);
-      margin: 0 1rem;
-   }
+@media (max-width: 550px) {
+  /* Makes container 1 grid */
+  #container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 1rem;
+  }
 
-   .content p {
-      margin-right: 5rem;
-   }
+  .content p {
+    margin-right: 5rem;
+  }
 
-   /* Positions card 1 to the first column and first row */
-   .cards:first-child {
-      grid-column: 1 / 5;
-      grid-row: 1;
-   }
-   
-   /* Positions card 2 to the first column and second row */
-   .cards:nth-child(2) {
-      border-bottom-left-radius: 0;
-      grid-column: 1 / 5;
-      grid-row: 2;
-   }
-   
-   /* Positions card 1 to the first column and third row */
-   .cards:last-child {
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      grid-row: 3;
-      grid-column: 1 / 5;
-   }
+  /* Positions card 1 to the first column and first row */
+  .cards:first-child {
+    grid-column: 1 / 5;
+    grid-row: 1;
+  }
+
+  /* Positions card 2 to the first column and second row */
+  .cards:nth-child(2) {
+    border-bottom-left-radius: 0;
+    grid-column: 1 / 5;
+    grid-row: 2;
+  }
+
+  /* Positions card 1 to the first column and third row */
+  .cards:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    grid-row: 3;
+    grid-column: 1 / 5;
+  }
 }
 
 /* Attribution */
 #attribution {
-   display: flex;
-   justify-content: center;
-   margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
 }
 
 #attribution p {
-   font-size: 0.86rem;
-   color: var(--color-2);
+  font-size: 0.86rem;
+  color: var(--color-2);
 }
 
 #attribution a {
-   text-decoration: none;
-   color: var(--color-1);
+  text-decoration: none;
+  color: var(--color-1);
 }
